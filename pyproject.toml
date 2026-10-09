@@ -1,0 +1,31 @@
+[project]
+name = "coursework3"
+version = "0.1.0"
+description = "Получение данных о самолётах из OpenSky и загрузка в PostgreSQL"
+authors = [
+    {name = "dianahaseo", email = "dianahaseo@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "requests (>=2.34.2,<3.0.0)",
+    "psycopg2-binary (>=2.9.13,<3.0.0)",
+    "psycopg[binary] (>=3.3.6,<4.0.0)",
+    "python-dotenv (>=1.2.4,<2.0.0)"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.lint.dependencies]
+flake8 = "^7.4.1"
+mypy = "^2.4.0"
+black = "^26.10.0"
+isort = "^9.0.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^9.1.1"
+
+[tool.poetry]
+package-mode = false
